@@ -1,10 +1,11 @@
-// fetch
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//converter
+// const som = document.querySelector('#som')
+// const usd = document.querySelector('#usd')
+// const eur = document.querySelector('#eur')
 
-//
 
 
-//
+
 const card = document.querySelector('.card'),
     btnNext = document.querySelector('#btn-next'),
     cardPrev = document.querySelector('#btn-prev')
@@ -16,7 +17,6 @@ const changeColor = (item) => {
         ? card.style.background = 'green'
         : card.style.background = 'red'
 }
-
 const getTodos = () => {
     fetch(`https://jsonplaceholder.typicode.com/todos?_limit=1&_page=${count}`)
         .then(response => response.json())
