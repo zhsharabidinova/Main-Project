@@ -51,7 +51,7 @@ const autoTabContentSlide = (i = 0) => {
         }
         hideTabContent()
         showTabContent(i)
-    }, 5000)
+    }, 3000)
 }
 autoTabContentSlide()
 hideTabContent()
@@ -86,7 +86,6 @@ const converter = (element, target1, target2, currency) => {
     }
 }
 
-// Использование функции для преобразования между USD, SOM и EUR
 converter(som, usd, eur, 'som');
 converter(usd, som , eur, 'usd');
 converter(eur, som, usd, 'eur');
@@ -122,21 +121,6 @@ const getTodos = async () =>{
         console.log(error)
     }
 }
-// const getTodos = () => {
-//     fetch(`https://jsonplaceholder.typicode.com/todos?_limit=1&_page=${count}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             data?.forEach(item => {
-//                 card.innerHTML = `
-//                 <h3>${item?.id}</h3>
-//                 <h4>${item?.title}</h4>
-//                 <p>${item?.completed}</p>
-//                 `
-//                 changeColor(item)
-//             })
-//         })
-// }
-//
 getTodos()
 
 btnNext.onclick = () => {
