@@ -18,32 +18,33 @@ gmailButton.addEventListener('click', ()=>{
 const childBlock = document.querySelector('.child_block')
 let positionX = 0;
 let positionY = 0;
-const moveBlock = () => {
-    if (positionX < 450 && positionY === 0) {
-        positionX++;
-        childBlock.style.left = positionX + 'px';
-    } else if (positionX === 450 && positionY < 450) {
-        positionY++;
-        childBlock.style.top = positionY + 'px';
-    } else if (positionX > 0 && positionY === 450) {
-        positionX--;
-        childBlock.style.left = positionX + 'px';
-    } else if (positionX === 0 && positionY > 0) {
-        positionY--;
-        childBlock.style.top = positionY + 'px';
-    }
+let angle = 0;
+const centerX = 212.5;
+const centerY = 212.5;
+const radius = 200;
 
-    setTimeout(moveBlock, 1);
+const moveBlockInCircle = () => {
+    const newX = centerX + Math.cos(angle) * radius;
+    const newY = centerY + Math.sin(angle) * radius;
+
+    positionX = newX;
+    positionY = newY;
+
+    childBlock.style.left = positionX + 'px';
+    childBlock.style.top = positionY + 'px';
+
+    angle += 0.005;
+
+    setTimeout(moveBlockInCircle, 1);
 };
 
-moveBlock();
+moveBlockInCircle();
 
 //TIME STOP
 
 const startBtn = document.querySelector('#start');
 const stopBtn = document.querySelector('#stop');
 const resetBtn = document.querySelector('#reset');
-const secondsS = document.querySelector('#secondsS');
 
 let newValue = 0;
 let interval;

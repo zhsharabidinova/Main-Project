@@ -15,6 +15,8 @@ body {
 }
 
 .btn {
+    font-weight: bold;
+    text-transform: uppercase;
     width: 250px;
     height: 50px;
     font-size: 20px;
@@ -26,7 +28,9 @@ body {
 }
 
 .btn:hover {
-    background: #414349;
+    background: #A91B1BFF;
+    color: white;
+    border: none;
 }
 
 .btn:active {

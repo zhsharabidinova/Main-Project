@@ -1,0 +1,39 @@
+.cards{
+    background: black;
+    padding: 100px 0;
+}
+.cards__content{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.card{
+    display: block;
+    width: 250px;
+    height: 270px;
+    padding: 15px;
+    border-radius: 7px;
+    border: 8px ridge #9f2818;
+}
+.card img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+.card_title{
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+}
+.card_desc{
+    margin-top: 10px;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+
+}
